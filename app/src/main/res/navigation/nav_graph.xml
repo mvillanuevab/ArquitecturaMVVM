@@ -12,10 +12,18 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_recipeFavoriteFragment"
-            app:destination="@id/recipeFavoriteFragment" />
+            app:destination="@id/recipeFavoriteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_mainFragment_to_recipeFragment"
-            app:destination="@id/recipeFragment" />
+            app:destination="@id/recipeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/recipeFragment"
@@ -24,13 +32,24 @@
         tools:layout="@layout/fragment_recipe" >
         <action
             android:id="@+id/action_recipeFragment_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="recipeArgs"
+            app:argType="mx.ine.institucional.movil.arquitecturamvvm.data.model.CategoryRecipe" />
     </fragment>
     <fragment
         android:id="@+id/recipeDetailFragment"
         android:name="mx.ine.institucional.movil.arquitecturamvvm.view.ui.fragments.RecipeDetailFragment"
         android:label="fragment_recipe_detail"
-        tools:layout="@layout/fragment_recipe_detail" />
+        tools:layout="@layout/fragment_recipe_detail" >
+        <argument
+            android:name="detailArgs"
+            app:argType="mx.ine.institucional.movil.arquitecturamvvm.data.model.Meal" />
+    </fragment>
     <fragment
         android:id="@+id/recipeFavoriteFragment"
         android:name="mx.ine.institucional.movil.arquitecturamvvm.view.ui.fragments.RecipeFavoriteFragment"
@@ -38,6 +57,10 @@
         tools:layout="@layout/fragment_recipe_favorite" >
         <action
             android:id="@+id/action_recipeFavoriteFragment_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 </navigation>
