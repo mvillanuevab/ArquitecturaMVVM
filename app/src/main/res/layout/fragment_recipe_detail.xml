@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    tools:context=".view.ui.fragments.RecipeDetailFragment">
+
+    <include android:id="@+id/empty_container_detail"
+        android:visibility="gone"
+        layout="@layout/tragos_not_found"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_recipes_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/iv_recipe_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/img_recipe_test"
+            android:contentDescription="@string/todo" />
+
+        <ImageButton
+            android:id="@+id/ib_recipe_detail_save_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_favorite_circle"
+            android:elevation="3dp"
+            android:src="@drawable/ic_favorite"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_recipe_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:text="Dessert" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/ingredients"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_recipe_detail_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="- ingrediente1\n- ingrediente2\n- ingrediente1\n- ingrediente2\n- ingrediente1\n" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+<!--    <Button-->
+<!--        android:id="@+id/btn_watch_video"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:fontFamily="@font/roboto"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        android:gravity="bottom"-->
+<!--        android:text="Watch the video" />-->
+
+
+</LinearLayout>

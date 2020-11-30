@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    android:id="@+id/cv_item_row_main"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_row_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_main_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/description_img_recipes"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/img_test" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/iv_main_recipe"
+            android:alpha=".8"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_main_title_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/iv_main_recipe"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Dessert" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

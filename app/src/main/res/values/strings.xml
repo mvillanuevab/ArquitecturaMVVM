@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Arquitectura MVVM</string>
+    <string name="description_img_recipes">Image of recipes</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="favorites">Favorites</string>
+    <string name="recipe_not_found">Recipe Not Found</string>
+    <string name="todo">TODO</string>
+</resources>
