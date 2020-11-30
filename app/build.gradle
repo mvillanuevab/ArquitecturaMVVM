@@ -23,7 +23,7 @@ task jacocoTestReport(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
     }
 //    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*', 'src/main/assets/**/*']
 //    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
-    def fileFilter = ['**/BuildConfig.class', 'src/main/assets/**/*'] //'src/main/gen/**/*',
+    def fileFilter = ['**/BuildConfig.class', 'src/main/gen/**/*', 'src/main/assets/**/*'] //'src/main/gen/**/*',
     def debugTree = fileTree(dir: "$buildDir/intermediates/javac/debug/classses", excludes: fileFilter)
     def mainSrc = "$project.projectDir/src/main"
 
