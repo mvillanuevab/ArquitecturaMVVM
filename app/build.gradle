@@ -6,7 +6,6 @@ plugins {
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
     id 'jacoco'
-    id 'org.sonarqube' version "3.0"
 }
 jacoco {
     toolVersion = "$jacocoVersion"
